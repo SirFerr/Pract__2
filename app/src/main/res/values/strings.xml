@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Pract__2</string>
+    <string name="appName">АСПКУ</string>
+    <string name="testListElement">Квартира 1</string>
+    <string name="Phone">Номер телефона</string>
+    <string name="Email">Почта</string>
+    <string name="Passwd">Пароль</string>
 </resources>
