@@ -10,18 +10,21 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 public class LogInActivity extends AppCompatActivity {
-    EditText editText = (EditText) findViewById(R.id.editTextTextEmailAddress);
-    ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        editText.setText(R.string.testEmail);
-        imageView.setImageResource(R.drawable.transparency_demonstration_1);
         setContentView(R.layout.activity_login);
+        EditText editText = (EditText) findViewById(R.id.editTextTextEmailAddress);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        editText.setText(getResources().getString(R.string.testEmail));
+        imageView.setImageResource(R.drawable.transparency_demonstration_1);
+
     }
 
     public void onLogInBtnClick(View view){
         Intent intent = new Intent(this, MainMenu.class);
+        EditText editText = (EditText) findViewById(R.id.editTextTextEmailAddress);
         intent.putExtra("email",editText.getText().toString());
         startActivity(intent);
         Log.d("onLogInBtnClick","clicked");
