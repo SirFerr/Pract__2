@@ -17,8 +17,9 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(this, RelativeActivity.class);
         setContentView(R.layout.activity_main_menu);
-        Bundle arguments = getIntent().getExtras();
+
         TextView textView =(TextView) findViewById(R.id.emailName);
+        Bundle arguments = getIntent().getExtras();
         textView.setText(arguments.getString("email"));
         Button button = (Button) findViewById(R.id.addApartmentBtn);
         button.setOnClickListener(new View.OnClickListener() {
