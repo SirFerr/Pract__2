@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Intent intent = new Intent(this, RelativeActivity.class);
         setContentView(R.layout.activity_main_menu);
 
@@ -30,4 +32,13 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Log.d("onBackPressed","onBackPressed");
+        Intent intent = new Intent();
+        intent.putExtra("emailResult","test2@gmail.com");
+        setResult(RESULT_OK,intent);
+        finish();
+    }
 }
